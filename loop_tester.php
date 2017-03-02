@@ -31,10 +31,10 @@
         <span><?php echo htmlspecialchars($scores_string); ?></span><br>
 
         <label>Score Total:</label>
-        <span><?php echo $score_total; ?></span><br>
+        <span><?php echo $score_total_f; ?></span><br>
 
         <label>Average Score:</label>
-        <span><?php echo $score_average; ?></span><br>
+        <span><?php echo $score_average_f; ?></span><br>
     </form>
     <h2>Process 1000 Die Rolls</h2>
     <form action="." method="post">
@@ -43,12 +43,11 @@
         <label>Number to Roll:</label>
         <select name="number_to_roll">
             <!-- TODO: Use a for loop to display these options ! -->
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
+            <?php
+            for($val = 1; $val < 7 ; $val++){
+                echo "<option value='$val'>$val</option>";
+            }
+            ?>
         </select><br>
 
         <label>&nbsp;</label>
